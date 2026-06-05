@@ -6,50 +6,60 @@
 <title>K.S GROUPE HI-TECH</title>
 
 <style>
-body{
-font-family:Arial,sans-serif;
+
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
 background:#f4f6f9;
 }
 
 header{
-background:#001b44;
+background:linear-gradient(135deg,#001b44,#003b8f);
 color:white;
 text-align:center;
-padding:20px;
+padding:30px 20px;
 }
 
 header img{
-width:120px;
+width:150px;
+margin-bottom:10px;
 }
 
 h1{
 margin:10px 0;
 }
 
-.contact{
-font-size:18px;
-font-weight:bold;
-}
-
 .section-title{
 text-align:center;
-margin:20px;
+margin:30px 0;
 color:#001b44;
+font-size:32px;
 }
 
 .products{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:25px;
 padding:20px;
+max-width:1400px;
+margin:auto;
 }
 
 .card{
 background:white;
-border-radius:10px;
+border-radius:15px;
 overflow:hidden;
-box-shadow:0 2px 10px rgba(0,0,0,0.15);
+box-shadow:0 4px 15px rgba(0,0,0,.15);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
 }
 
 .card img{
@@ -58,12 +68,57 @@ display:block;
 }
 
 .card-content{
-padding:15px;
+padding:20px;
+}
+
+.card-content h3{
+color:#001b44;
+margin-bottom:10px;
 }
 
 .price{
-color:red;
-font-size:22px;
+color:#e60023;
+font-size:28px;
+font-weight:bold;
+margin-top:10px;
+}
+
+.btn{
+display:inline-block;
+margin-top:15px;
+padding:12px 20px;
+background:#25D366;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+}
+
+.services{
+padding:40px 20px;
+background:white;
+margin-top:30px;
+}
+
+.services h2{
+text-align:center;
+margin-bottom:20px;
+color:#001b44;
+}
+
+.service-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+max-width:1200px;
+margin:auto;
+}
+
+.service-card{
+background:#f4f6f9;
+padding:20px;
+border-radius:10px;
+text-align:center;
 font-weight:bold;
 }
 
@@ -71,29 +126,68 @@ footer{
 background:#001b44;
 color:white;
 text-align:center;
-padding:20px;
+padding:30px 20px;
 margin-top:30px;
 }
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+width:90px;
+height:90px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:42px;
+text-decoration:none;
+box-shadow:0 6px 20px rgba(0,0,0,.4);
+z-index:9999;
+}
+
+.call{
+position:fixed;
+bottom:120px;
+right:20px;
+background:#ffcc00;
+color:#000;
+width:90px;
+height:90px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:42px;
+text-decoration:none;
+box-shadow:0 6px 20px rgba(0,0,0,.4);
+z-index:9999;
+}
+
 </style>
 </head>
 
- <a href="https://wa.me/2250789965224"
-style="position:fixed;bottom:20px;right:20px;
-background:#25D366;color:white;
-padding:15px 20px;border-radius:50px;
-text-decoration:none;font-weight:bold;
-box-shadow:0 4px 10px rgba(0,0,0,.3);">
-💬 WhatsApp
- </a>
 <body>
+
+<a class="whatsapp" href="https://wa.me/2250789965224">💬</a>
+
+<a class="call" href="tel:+2250789965224">📞</a>
 
 <header>
 <img src="images/logo.png" alt="Logo">
+
 <h1>K.S GROUPE HI-TECH</h1>
+
 <div style="background:#ffcc00;color:#001b44;padding:15px;margin-top:15px;border-radius:10px;font-weight:bold;">
 🚚 Livraison partout en Côte d'Ivoire | 📞 0789965224
 </div>
-<p>Anyama Plaque Arabe, face au Stade Olympique d'Ebimpé</p>
+
+<p style="margin-top:15px;">
+📍 Anyama Plaque Arabe, face au Stade Olympique d'Ebimpé
+</p>
+
 </header>
 
 <h2 class="section-title">Nos Produits</h2>
@@ -101,59 +195,106 @@ box-shadow:0 4px 10px rgba(0,0,0,.3);">
 <div class="products">
 
 <div class="card">
-<img src="images/disque.jpg">
+<img src="images/disque.jpg" alt="">
 <div class="card-content">
 <h3>Disque Dur Toshiba 1To</h3>
 <p>Stock disponible</p>
 <div class="price">10 000 FCFA</div>
-<a class="btn" href="https://wa.me/2250789965224">
-Commander
-</a>
+<a class="btn" href="https://wa.me/2250789965224">Commander</a>
+</div>
+</div>
 
 <div class="card">
-<img src="images/hp.jpg">
+<img src="images/hp.jpg" alt="">
 <div class="card-content">
 <h3>Ordinateur HP</h3>
 <p>Performance et fiabilité</p>
 <div class="price">170 000 FCFA</div>
-<a class="btn" href="https://wa.me/2250789965224">
-Commander
-</a>
+<a class="btn" href="https://wa.me/2250789965224">Commander</a>
+</div>
+</div>
 
 <div class="card">
-<img src="images/motorola.jpg">
+<img src="images/motorola.jpg" alt="">
 <div class="card-content">
 <h3>Motorola PTP 58300 ODU</h3>
 <p>Transmission longue distance</p>
 <div class="price">100 000 FCFA</div>
-<a class="btn" href="https://wa.me/2250789965224">
-Commander
-</a>
+<a class="btn" href="https://wa.me/2250789965224">Commander</a>
+</div>
+</div>
 
 <div class="card">
-<img src="images/horloge.jpg">
+<img src="images/horloge.jpg" alt="">
 <div class="card-content">
 <h3>Horloge LED Bois</h3>
-<p>Heure - Date - Température - Alarme</p>
+<p>Heure • Date • Température • Alarme</p>
 <div class="price">5 000 FCFA</div>
-<a class="btn" href="https://wa.me/2250789965224">
-Commander
-</a>
+<a class="btn" href="https://wa.me/2250789965224">Commander</a>
+</div>
+</div>
 
 <div class="card">
-<img src="images/camera.jpg">
+<img src="images/camera.jpg" alt="">
 <div class="card-content">
 <h3>Kit Vidéosurveillance 8 Caméras</h3>
 <p>Installation disponible</p>
 <div class="price">280 000 FCFA</div>
-<a class="btn" href="https://wa.me/2250789965224">
-Commander
-</a>
+<a class="btn" href="https://wa.me/2250789965224">Commander</a>
+</div>
+</div>
+
+<div class="card">
+<img src="images/hp.jpg" alt="">
+<div class="card-content">
+<h3>Ordinateur Lenovo</h3>
+<p>Ordinateur professionnel haute performance</p>
+<div class="price">200 000 FCFA</div>
+<a class="btn" href="https://wa.me/2250789965224">Commander</a>
+</div>
+</div>
+
+</div>
+
+<section class="services">
+
+<h2>Nos Services</h2>
+
+<div class="service-grid">
+
+<div class="service-card">
+📹 Installation de Vidéosurveillance
+</div>
+
+<div class="service-card">
+🌐 Réseaux Informatiques
+</div>
+
+<div class="service-card">
+💻 Maintenance Informatique
+</div>
+
+<div class="service-card">
+🖨️ Vente de Matériel Informatique
+</div>
+
+</div>
+
+</section>
 
 <footer>
+
 <h3>K.S GROUPE HI-TECH</h3>
+
 <p>Informatique • Réseaux • Vidéosurveillance • Accessoires</p>
+
 <p>📞 0789965224 / 0745032948</p>
+
 <p>📍 Anyama Plaque Arabe, face au Stade Olympique d'Ebimpé</p>
-<p>🌐 ksgroupehitech.github.io</p>
+
+<p>🌐 https://ksgroupehitech.github.io</p>
+
 </footer>
+
+</body>
+</html>
